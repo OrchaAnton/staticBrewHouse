@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>BrewHouse</title>
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="stylesheet" href="../font-awesome-4.5.0/css/font-awesome.min.css">
+	<link href="../css/component.css" rel="stylesheet">
+	<link href="../css/blog.css" rel="stylesheet">
+	<style>
+		.banner{
+			/*opacity:0.8;*/
+			width: 100%;
+			background: no-repeat;
+			height: 40vh;
+			background-image: url(../img/11.jpg);
+			background-size: cover;
+			background-position: 50%;
+		}
+		ul.side-nav.leftside-navigation {
+			top: 64px;
+			/*width: 300px;*/
+		}
+		.leftmenu-item:hover, .leftmenu-item.active {
+			background-color: #cfd8dc;
+		}
+		/*
+		.main{
+			background: url(../img/whitebrick.jpg) repeat !important;
+		}
+		body{
+			background: none !important;
+		}
+		*/
+		.info-header{
+			background: url(../img/wob-taps.jpeg) no-repeat;
+			background-size: cover;
+			background-position: 50% 70%;
+			height: 30vh;
+			
+		}
+		@media only screen and (max-width : 992px) {
+		  header, .main, footer {
+			padding-left: 0;
+		  }
+		}
+		.main, footer {
+		  padding-left: 240px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- окно авторизации -->
+	<div id="sign-modal" class="modal" style="">
+		<div class="modal-content center-align">
+			<h4>Добро пожаловать!</h4>
+			<img class="circle responsive-img hide-on-small-only"src="../img/logoBig.png" style="width:150px"/>
+			<div class="row">
+				<form class="col s12">
+				  <div class="row">
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">email</i>
+					  <input id="icon_prefix" type="email" class="validate">
+					  <label for="icon_prefix">Email</label>
+					</div>
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">vpn_key</i>
+					  <input id="icon_telephone" type="password" class="validate">
+					  <label for="icon_telephone">Пароль</label>
+					</div>
+				  </div>
+				</form>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<a class="waves-effect waves-light btn-large light-green accent-4 enter hide-on-small-only"><i class="fa fa-sign-in "></i>&nbsp;&nbsp;&nbsp;Вход</a>
+					<a class="waves-effect waves-light btn light-green accent-4 enter hide-on-large-only">Вход</a>
+				</div>
+				<div class="col s12">&nbsp;</div>
+				<div class="col s12">
+					<a class="waves-effect waves-light btn-large amber accent-3 enter hide-on-small-only"><i class="fa fa-power-off"></i>&nbsp;&nbsp;&nbsp;Регистрация</a>
+					<a class="waves-effect waves-light btn amber accent-3 enter hide-on-large-only">Регистрация</a>
+				</div>
+			</div>
+		</div>
+		<!--div class="modal-footer">
+		
+			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		</div-->
+	</div>
+  
+	<!-- Навигация -->
+	<div class="navbar-fixed">
+		<!-- Dropdown Structure -->
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="#!"><i class="material-icons left">account_circle</i>Личный кабинет <span class="new badge">2</span></a></li>
+			<li><a href="#!"><i class="material-icons left">dashboard</i>Моя страница</a></li>
+			<li class="divider"></li>
+			<li><a href="#!"><i class="material-icons left">exit_to_app</i>Выход</a></li>
+		</ul>
+		<nav class="grey darken-3" role="navigation">
+			<div class="nav-wrapper container">
+				<a id="logo-container" href="#" class="brand-logo">
+					<img src="../img/logoN.png" alt="" style="height:55px; vertical-align:middle;">
+				</a>
+				<ul class="right-nav hide-on-med-and-down">
+					<li>
+						<a class="dropdown-button" href="#!" data-activates="dropdown1">
+							<i class="material-icons right">arrow_drop_down</i>
+							<img src="http://weknowyourdreams.com/images/batman/batman-07.jpg" class="circle responsive-img" style="height:45px; vertical-align:middle;" /> 
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DK Brevery 
+						</a>
+					</li>
+				</ul>	
+			
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="../landing/index.html"><i class="left fa fa-info fa-lg"></i>О Проекте</a>
+					</li>
+					<li>
+						<a href="../beer.html"><i class="left icon-beer"></i>Пиво</a>
+					</li>
+					<li class="">
+						<a href="../makers.html"><i class="left icon-users"></i>Пивовары</a>
+					</li>
+					<li>
+						<a href="../blogs.html"><i class="left fa fa-newspaper-o fa-lg"></i>Блоги</a>
+					</li>
+					<li>
+						<a href="../blogs.html"><i class="left fa fa-book fa-lg"></i>Азбука пива</a>
+					</li>
+					
+					<li></li>
+				</ul>
+				    
+				<ul class="right"></ul>
+				<ul id="nav-mobile" class="side-nav">
+					<li>
+						<a href="../about.html"><i class="left fa fa-info fa-lg"></i>О Проекте</a>
+					</li>
+					<li>
+						<a href="../beer.html"><i class="left icon-beer"></i>Пиво</a>
+					</li>
+					<li class="">
+						<a href="../makers.html"><i class="left icon-users"></i>Пивовары</a>
+					</li>
+					<li>
+						<a href="../blogs.html"><i class="left fa fa-newspaper-o fa-lg"></i>Блоги</a>
+					</li>
+					<li>
+						<a href="../blogs.html"><i class="left fa fa-book fa-lg"></i>Азбука пива</a>
+					</li>
+				</ul>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="slide-out1" class="button-collapse right"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+	</div>
+	
+	<!-- Боковая панель меню -->
+	<ul id="slide-out" class="side-nav fixed leftside-navigation blue-grey lighten-4 white-text">
+		<li>
+			<div class="section row">
+				<div class="col s12">
+					<div class="avatar-md" style="background-image: url(http://weknowyourdreams.com/images/batman/batman-07.jpg)"> </div>
+					
+				</div>
+				<div class="col s12 center-align">
+					<br>
+					<button class="waves-effect waves-light btn">Сменить</button>
+				</div>
+			</div>
+		</li>
+		<li class="active"><a href="info.html"><i class="fa fa-user fa-2x fa-fw"></i>Информация</a></li>
+		<li ><a href="messages.html"><i class="fa fa-envelope-o fa-2x fa-fw"></i> Сообщения <span class="new badge">2</span></a></li>
+		<li><a href="stat.html"><i class="fa fa-bar-chart fa-2x fa-fw"></i> Статистика</a></li>
+		<li><a href="orders.html"><i class="fa fa-shopping-cart fa-2x fa-fw"></i> Заказы</a></li>
+		<li><a href="settings.html"><i class="fa fa-cogs fa-2x fa-fw"></i> Настройки</a></li>
+	</ul> 
+	<div class="row main">
+		<div class="col s12 hide-on-small-only" >
+			<div class="info-header"></div>
+		</div>
+		<div class="col s12">
+			<div class="section">
+				<div class="row">
+					<!--div class="col s12 m6">
+						<div class="card" style="border-top: 5px solid #2196F3">
+							<div class="card-content">
+								<h4><i class="left icon-beer"></i> Пивовар</h4>
+								<h5>Рейтинг:</h5>
+								<p class="yellow-text text-darken-1">
+									<i class="fa fa-2x fa-star"></i><i class="fa fa-2x fa-star"></i><i class="fa fa-2x fa-star"></i><i class="fa fa-2x fa-star"></i><i class="fa fa-2x fa-star-o"></i> <span class="right" score>358 <i class="fa fa-male"></i></span>
+								</p>
+							</div>
+							<div class="card-action">
+								<a href="#" >
+									<span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-thumbs-o-up fa-stack-1x fa-inverse"></i></span> 25
+								</a>
+								<a href="blog.html" class="right">Читать подробнее</a>
+							</div>
+						</div>
+					</div-->
+				<!-- Личная информация -->
+					<div class="col s12">
+						<div class="card" style="border-top: 5px solid #2196F3">
+							<div class="card-content">
+								<h4><i class="material-icons">directions_walk</i> Личная информация</h4>
+								<div class="row">
+									<form class="col s12">
+									  <div class="row">
+										<div class="input-field col s6">
+											<i class="material-icons prefix">account_circle</i>
+											<input disabled  id="icon_prefix" type="text" value="Александр" class="validate info">
+											<label for="icon_prefix">Имя</label>
+										</div>
+										<div class="input-field col s6">
+											<i class="material-icons prefix">account_circle</i>
+											<input disabled id="icon_prefix" type="text" value="Канивец" class="validate info">
+											<label for="icon_prefix">Фамилия</label>
+										</div>
+										<div class="input-field col s6">
+											<i class="material-icons prefix">phone</i>
+											<input disabled  id="icon_telephone" type="tel" value="+7 (495) 777-77-77" class="validate info">
+											<label for="icon_telephone">Телефон</label>
+										</div>
+										<div class="input-field col s6">
+											<i class="material-icons prefix">email</i>
+											<input disabled  id="icon_telephone" type="email" value="dkbrewery@beerhouse.ru" class="validate info">
+											<label for="icon_telephone">Телефон</label>
+										</div>
+										<div class="input-field col s12">
+										  <i class="material-icons prefix">place</i>
+										  <input disabled id="icon_prefix" type="text" value="г. Москва, Красная площадь д.1" class="validate info">
+										  <label for="icon_prefix">Адрес доставки</label>
+										</div>
+									  </div>
+									</form>
+								</div>
+					
+							</div>
+							<div class="card-action right-align">
+								<a onclick="$('input').prop('disabled', false)" class="waves-effect waves-light btn blue-grey darken-1"> <i class="material-icons left">mode_edit</i> Изменить</a>
+							</div>
+						</div>
+					</div>
+				<!-- Общие сведения --> 	
+					<div class="col s7">
+						<div class="card" style="border-top: 5px solid #2196F3">
+							<div class="card-content">
+								<h4><i class="material-icons">person_pin</i> Общие сведения</h4>
+								<div class="row">
+									<form class="col s12">
+									  <div class="row">
+										<div class="input-field col s12">
+											<i class="material-icons prefix">loyalty</i>
+											<select id="icon_prefix" class="validate info">
+												<option value="man" selected>Мужчина</option>
+												<option value="woman">Женщина</option>
+											</select>
+											<label for="icon_prefix">Пол</label>
+										</div>
+										<div class="input-field col s12">
+											<i class="material-icons prefix">today</i>
+											<input id="icon_prefix" type="date" data-value="24/8/11989" class="validate datepicker info">
+											<label for="icon_prefix">Дата рождения</label>
+										</div>
+										<div class="input-field col s12">
+											<i class="material-icons prefix">pageview</i>
+											<input id="icon_telephone" type="text" value="" class="validate info">
+											<label for="icon_telephone">Род занятий</label>
+										</div>
+									  </div>
+									</form>
+								</div>
+							</div>
+							<div class="card-action right-align">
+								<a onclick="" class="waves-effect waves-light btn blue-grey darken-1"> <i class="material-icons left">mode_edit</i> Изменить</a>
+							</div>
+						</div>
+					</div>
+				<!-- ПАроль --> 
+					<div class="col s5">
+						<div class="card" style="border-top: 5px solid #2196F3">
+							<div class="card-content">
+								<h4><i class="material-icons">security</i> Пароль</h4>
+								<div class="row">
+									<form class="col s12">
+									  <div class="row">
+										<div class="input-field col s12">
+											<i class="material-icons prefix">vpn_key</i>
+											<input id="icon_prefix" type="password" value="" class="validate info">
+											<label for="icon_prefix">Старый</label>
+										</div>
+										<div class="input-field col s12">
+											<i class="material-icons prefix">vpn_key</i>
+											<input id="icon_prefix" type="password" value="" class="validate info">
+											<label for="icon_prefix">Новый</label>
+										</div>
+										<div class="input-field col s12">
+											<i class="material-icons prefix">vpn_key</i>
+											<input id="icon_telephone" type="password" value="" class="validate info">
+											<label for="icon_telephone">Повторно новый</label>
+										</div>
+									  </div>
+									</form>
+								</div>
+							</div>
+							<div class="card-action right-align">
+								<a onclick="" class="waves-effect waves-light btn blue-grey darken-1"> <i class="material-icons left">mode_edit</i> Изменить</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Footer -->
+    	<footer class="page-footer  amber accent-4">
+		<div class="container">
+			<div class="row">
+				
+			</div>
+		</div>
+		<div class="footer-copyright">
+		  <div class="container">
+		  Made by <a class="brown-text text-lighten-3" href="#">Lexus</a>
+		  </div>
+		</div>
+	</footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('select').material_select();
+			$('.slider').slider({images:true});
+			$('.slider').slider("start");
+			$('.tooltipped').tooltip({delay: 50});
+			$('.modal-trigger').leanModal();
+			$(".button-collapse").sideNav();
+			$('ul.tabs').tabs();
+			$('.button-collapse1').sideNav({
+				  menuWidth: 300, // Default is 240
+				  edge: 'right', // Choose the horizontal origin
+				  closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+				}
+			);
+			$('.datepicker').pickadate({
+				selectMonths: true, // Creates a dropdown to control month
+				selectYears: 65, // Creates a dropdown of 15 years to control year
+				max: '2016-02-02'
+				//now: '1989-01-24'
+			});
+		});
+
+	</script>
+
+  </body>
+
+</html>

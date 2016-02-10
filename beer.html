@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>BrewHouse</title>
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+	<link href="css/component.css" rel="stylesheet">
+	<link href="css/blog.css" rel="stylesheet">
+	
+</head>
+<body>
+	<div id="sign-modal" class="modal" style="">
+		<div class="modal-content center-align">
+			<h4>Добро пожаловать!</h4>
+			<img class="circle responsive-img hide-on-small-only"src="img/logoBig.png" style="width:150px"/>
+			<div class="row">
+				<form class="col s12">
+				  <div class="row">
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">email</i>
+					  <input id="icon_prefix" type="email" class="validate">
+					  <label for="icon_prefix">Email</label>
+					</div>
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">vpn_key</i>
+					  <input id="icon_telephone" type="password" class="validate">
+					  <label for="icon_telephone">Пароль</label>
+					</div>
+				  </div>
+				</form>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<a class="waves-effect waves-light btn-large light-green accent-4 enter hide-on-small-only"><i class="fa fa-sign-in "></i>&nbsp;&nbsp;&nbsp;Вход</a>
+					<a class="waves-effect waves-light btn light-green accent-4 enter hide-on-large-only">Вход</a>
+				</div>
+				<div class="col s12">&nbsp;</div>
+				<div class="col s12">
+					<a class="waves-effect waves-light btn-large amber accent-3 enter hide-on-small-only"><i class="fa fa-power-off"></i>&nbsp;&nbsp;&nbsp;Регистрация</a>
+					<a class="waves-effect waves-light btn amber accent-3 enter hide-on-large-only">Регистрация</a>
+				</div>
+			</div>
+		</div>
+		<!--div class="modal-footer">
+		
+			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		</div-->
+	</div>
+	
+	<div id="beer-modal" class="modal" style="">
+		<div class="modal-content center-align">
+			<div class="row">
+				<div class="col s12 m8 card modal-beer" style="border-top: 5px solid #e65100;">
+					<div class="section">
+						<h4> Belgian Stout </h4>
+						<div class="row">
+							<div class="col s12 m6">
+								<div class="slider">
+									<ul class="slides">
+									  <li>
+										<img class="responsive-img" src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+									  </li>
+									  <li>
+										<img class="responsive-img" src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+									  </li>
+									  <li>
+										<img class="responsive-img" src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+									  </li>
+								</div>
+							</div>
+							<div class="col s12 m6 left-align description">
+								
+									<h6>Тип</h6>
+									<ul class="fa-ul">
+										<li><i class="fa-li fa fa-check-square"></i>Brown ale</li>
+										<li><i class="fa-li fa fa-check-square"></i>Темнокоричневый</li>
+									</ul>
+
+									<h6>Состав</h6>
+									<ul class="fa-ul">
+										<li><i class="fa-li fa fa-check-square"></i>Солод стандартный</li>
+										<li><i class="fa-li fa fa-check-square"></i>Солод карамельный</li>
+										<li><i class="fa-li fa fa-spinner fa-spin"></i>Солод медовый</li>
+										<li><i class="fa-li fa fa-square"></i>Хмель стандартный</li>
+										<li><i class="fa-li fa fa-square"></i>Хмель "Mosaic"</li>
+									</ul>
+
+									<h6>Аромат</h6>
+									<ul class="fa-ul">
+										<li><i class="fa-li fa fa-check-square"></i>Цветочный</li>
+										<li><i class="fa-li fa fa-check-square"></i>Пряный</li>
+									</ul>
+
+									<h6>Послевкусие</h6>
+									<ul class="fa-ul">
+										<li><i class="fa-li fa fa-check-square"></i>Вкусное</li>
+									</ul>
+
+							</div>
+							<div class="col s12 align-left">
+								<div class="chip">mosaic</div>
+								<div class="chip">brownAle</div>
+								<div class="chip">DKbrewery</div>
+								<div class="chip">beer</div>
+							</div>
+						</div>
+						<p> Тут небольшое описание пива и о том как раскрывается вкус. Наслаждайтесь
+					</div>
+				</div>
+				<div class="col s12 offset-m1 m3 center card valign-wrapper modal-brewer" style="border-top: 5px solid #2196F3; height:100%;">
+					<div class="section valign">
+						<div class="avatar-sm" style="background-image: url(http://weknowyourdreams.com/images/batman/batman-07.jpg)"> </div>
+						<h5 class="header center orange-text text-darken-1 z-text-1">DK Brevery</h5>
+						<h6 class="header col s12 light z-text-1">Пиво созданное с душою для души!</h6>
+						<div class="2" style="font-size:x-large;">
+							<div class="row">
+								<div class="col s4 red-text tooltipped" data-position="bottom" data-delay="30" data-tooltip="Рейтинг">
+									<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-star fa-stack-1x fa-inverse"></i></span>4.5
+								</div>
+								<div class="col s4 blue-text tooltipped" data-position="bottom" data-delay="30" data-tooltip="Сварено">
+									<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-beer fa-stack-1x fa-inverse"></i></span>45л
+								</div>
+								<div class="col s4 teal-text tooltipped" data-position="bottom" data-delay="30" data-tooltip="Подписчики">
+									<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-hand-peace-o  fa-stack-1x fa-inverse"></i></span>30
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		 <!--div class="modal-footer">
+		  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		</div-->
+	</div>
+	
+	<!-- Навигация -->
+	<div class="navbar-fixed">
+		<nav class="grey darken-3" role="navigation">
+			<div class="nav-wrapper container">
+				<a id="logo-container" href="#" class="brand-logo">
+					<img src="img/logoN.png" alt="" style="height:55px; vertical-align:middle;">
+				</a>
+				<ul class="right-nav hide-on-med-and-down">
+					<li><a class="light-green-text text-accent-4 modal-trigger" href="#sign-modal"><i class="left fa fa-sign-in fa-lg"></i>Вход</a></li>
+				</ul>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="landing/index.html"><i class="left fa fa-info fa-lg"></i>О Проекте</a>
+					</li>
+					<li class="active">
+						<a href="beer.html"><i class="left icon-beer"></i>Пиво</a>
+					</li>
+					<li >
+						<a href="makers.html"><i class="left icon-users"></i>Пивовары</a>
+					</li>
+					<li>
+						<a href="blogs.html"><i class="left fa fa-newspaper-o fa-lg"></i>Блоги</a>
+					</li>
+					<li>
+						<a href="blogs.html"><i class="left fa fa-book fa-lg"></i>Азбука пива</a>
+					</li>
+					
+					<li></li>
+				</ul>
+				<ul class="right"></ul>
+				<ul id="nav-mobile" class="side-nav">
+					<li>
+						<a href="about.html"><i class="left fa fa-info fa-lg"></i>О Проекте</a>
+					</li>
+					<li class="active">
+						<a href="beer.html"><i class="left icon-beer"></i>Пиво</a>
+					</li>
+					<li>
+						<a href="makers.html"><i class="left icon-users"></i>Пивовары</a>
+					</li>
+					<li>
+						<a href="blogs.html"><i class="left fa fa-newspaper-o fa-lg"></i>Блоги</a>
+					</li>
+					<li>
+						<a href="blogs.html"><i class="left fa fa-book fa-lg"></i>Азбука пива</a>
+					</li>
+				</ul>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+	</div>
+	
+	<!-- Картинка -->
+	<div id="index-banner" class="parallax-container">
+		<div class="section no-pad-bot">
+			<div class="container">
+				<br><br>
+				<h1 class="header center orange-text text-darken-1">Parallax Template</h1>
+				<div class="row center">
+				  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+				</div>
+				<div class="row center">
+				  <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+				</div>
+				<br><br>
+			</div>
+		</div>
+		<div class="parallax"><img src="img/bg-beer.jpg" alt="Unsplashed background img 1" style="display: block; transform: translate3d(-50%, 35px, 0px);"></div>
+	</div>
+
+
+	<div class="container">
+		<div class="section">
+			<!-- Marketing Icons Section -->
+			<div class="row filter-box">
+				<div class="input-field col s3">
+						<input placeholder="Начните вводить" id="search" type="text" class="validate">
+						<label>Поиск</label>
+				</div>
+				<div class="input-field col s3">   
+					<select class="icons">
+						<option value="" disabled selected>Нажмите для выбора</option>
+						<option value="" data-icon="img/date.png" class="left circle">По дате добавления</option>
+						<option value="" data-icon="img/rate.png" class="left material-icons circle">По рейтингу</option>
+						<option value="" data-icon="img/money.png" class="left circle">По цене</option>
+						<option value="" data-icon="img/people.png" class="left circle">По пользователям</option>
+					</select>
+					<label>Сортировка</label>
+				</div>
+				<div class="input-field col s3">
+					<select class="icons">
+						<option value="" disabled selected>Нажмите для выбора</option>
+						<option value="" data-icon="img/lager.png" class="left circle">Лагер</option>
+						<option value="" data-icon="img/el.png" class="left circle">Эль</option>
+						<option value="" data-icon="img/staut.png" class="left circle">Стаут</option>
+						<option value="" data-icon="img/red.png" class="left circle">Красное</option>
+					</select>
+					<label>Категории</label>
+				</div>
+				<div class="input-field col s3">
+					<select>
+						<option value="" disabled selected>Нажмите для выбора</option>
+						<option value="" >от 100</option>
+						<option value="" >от 200</option>
+						<option value="" >от 350</option>
+						<option value="" >от 500</option>
+					</select>
+					<label>Стоимость(литр)</label>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="section">
+			<ul class="ch-grid">
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer1.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>BEERVILLE LIGHT</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Фруктовый</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer2.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Bitter XX</h3>
+							<h6>Сорт: <b>Bitter</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by DKBrewery <a class="modal-trigger" href="#beer-modal">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer3.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Особый 387</h3>
+							<h6>Сорт: <b>Lager</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by Моспиво <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer4.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>7 Hop IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by ROGUE FARMS <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer5.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>OStier Stout</h3>
+							<h6>Сорт: <b>Stout</b></h6>
+							<h6>Цвет: <b>Черный</b></h6>
+							<h6>Аромат: <b>Кофейный</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer6.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Long hammer IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by RED HOOK <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer1.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>BEERVILLE LIGHT</h3>
+							<h6>Сорт: <b><i class="fa fa-rub"></i>IPA</b></h6>
+							<h6>Цвет: <b><i class="fa fa-rub"></i>Красный</b></h6>
+							<h6>Аромат: <b><i class="fa fa-rub"></i>Фруктовый</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer2.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Bitter XX</h3>
+							<h6>Сорт: <b>Bitter</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by DKBrewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer3.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Особый 387</h3>
+							<h6>Сорт: <b>Lager</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by Моспиво <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer4.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>7 Hop IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by ROGUE FARMS <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer5.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>OStier Stout</h3>
+							<h6>Сорт: <b>Stout</b></h6>
+							<h6>Цвет: <b>Черный</b></h6>
+							<h6>Аромат: <b>Кофейный</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer6.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Long hammer IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by RED HOOK <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer1.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>BEERVILLE LIGHT</h3>
+							<h6>Сорт: <b><i class="fa fa-rub"></i>IPA</b></h6>
+							<h6>Цвет: <b><i class="fa fa-rub"></i>Красный</b></h6>
+							<h6>Аромат: <b><i class="fa fa-rub"></i>Фруктовый</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer2.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Bitter XX</h3>
+							<h6>Сорт: <b>Bitter</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by DKBrewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer3.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Особый 387</h3>
+							<h6>Сорт: <b>Lager</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by Моспиво <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer4.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>7 Hop IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by ROGUE FARMS <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer5.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>OStier Stout</h3>
+							<h6>Сорт: <b>Stout</b></h6>
+							<h6>Цвет: <b>Черный</b></h6>
+							<h6>Аромат: <b>Кофейный</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer6.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Long hammer IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by RED HOOK <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer1.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>BEERVILLE LIGHT</h3>
+							<h6>Сорт: <b><i class="fa fa-rub"></i>IPA</b></h6>
+							<h6>Цвет: <b><i class="fa fa-rub"></i>Красный</b></h6>
+							<h6>Аромат: <b><i class="fa fa-rub"></i>Фруктовый</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer2.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Bitter XX</h3>
+							<h6>Сорт: <b>Bitter</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by DKBrewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer3.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Особый 387</h3>
+							<h6>Сорт: <b>Lager</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by Моспиво <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer4.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>7 Hop IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by ROGUE FARMS <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer5.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>OStier Stout</h3>
+							<h6>Сорт: <b>Stout</b></h6>
+							<h6>Цвет: <b>Черный</b></h6>
+							<h6>Аромат: <b>Кофейный</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer6.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Long hammer IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by RED HOOK <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer1.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>BEERVILLE LIGHT</h3>
+							<h6>Сорт: <b><i class="fa fa-rub"></i>IPA</b></h6>
+							<h6>Цвет: <b><i class="fa fa-rub"></i>Красный</b></h6>
+							<h6>Аромат: <b><i class="fa fa-rub"></i>Фруктовый</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer2.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Bitter XX</h3>
+							<h6>Сорт: <b>Bitter</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by DKBrewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer3.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Особый 387</h3>
+							<h6>Сорт: <b>Lager</b></h6>
+							<h6>Цвет: <b>Светлый</b></h6>
+							<h6>Аромат: <b>Классический</b></h6>
+							<p>by Моспиво <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="furniture">
+						<img src="img/beer4.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>7 Hop IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h6>Аромат: <b>Горький</b></h6>
+							<p>by ROGUE FARMS <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="gift">
+						<img src="img/beer5.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>OStier Stout</h3>
+							<h6>Сорт: <b>Stout</b></h6>
+							<h6>Цвет: <b>Черный</b></h6>
+							<h6>Аромат: <b>Кофейный</b></h6>
+							<p>by JAWS Brewery <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item" data-cat="jewel">
+						<img src="img/beer6.jpg" class="img-responsive z-depth-1" alt="Generic placeholder thumbnail">
+						<div class="ch-info z-depth-3">
+							<h3>Long hammer IPA</h3>
+							<h6>Сорт: <b>IPA</b></h6>
+							<h6>Цвет: <b>Красный</b></h6>
+							<h5>Аромат: <b>Горький</b></h6>
+							<p>by RED HOOK <a href="item.html">Посмотреть</a></p>
+						</div>
+					</div>
+				</li>
+				
+			</ul>
+    </div>
+    <div class="section">
+        <div class="row center">
+          <ul class="pagination col s12">
+						<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+						<li class="active"><a href="#!">1</a></li>
+						<li class="waves-effect"><a href="#!">2</a></li>
+						<li class="waves-effect"><a href="#!">3</a></li>
+						<li class="waves-effect"><a href="#!">4</a></li>
+						<li class="waves-effect"><a href="#!">5</a></li>
+						<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+					</ul>
+        </div>
+    </div>
+		<hr>
+		<div class="section">
+			<div class="slider feedback">
+				<ul class="slides">
+				  <li>
+					<div class="caption center-align text-grey text-lighten-3" data-img="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg">
+						<h5 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</h5>
+						<small class="light grey-text text-lighten-3">Someone famous</small>
+					</div>
+				  </li>
+				  <li>
+					<div class="caption center-align text-grey text-lighten-3" data-img="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg">
+						<h5 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</h5>
+						<small class="light grey-text text-lighten-3">Someone famous</small>
+					</div>
+				  </li>
+				  <li>
+					<div class="caption center-align text-grey text-lighten-3" data-img="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg">
+						<h5 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</h5>
+						<small class="light grey-text text-lighten-3">Someone famous</small>
+					</div>
+				  </li>
+				  <li>
+					<div class="caption center-align text-grey text-lighten-3" data-img="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg">
+						<h5 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</h5>
+						<small class="light grey-text text-lighten-3">Someone famous</small>
+					</div>
+				  </li>
+				</ul>
+
+			 </div>
+			
+		</div>
+	</div>
+
+	<footer class="page-footer  amber accent-4">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					  <h5 class="white-text">BrewHouse</h5>
+					  <p class="grey-text text-darken-4">
+					  Мы создали эту социальную сеть, чтобы она объединила молодых и перспективных пивоваров с любителями крафтового пива!
+					  А также чтоб люди открыли для новые сорта крафтового пива в уже известнных крафтовых пивоарен.
+					</p>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Settings</h5>
+					<ul>
+						<li><a class="white-text" href="#!">Link 1</a></li>
+						<li><a class="white-text" href="#!">Link 2</a></li>
+						<li><a class="white-text" href="#!">Link 3</a></li>
+						<li><a class="white-text" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="col l3 s12">
+				  <h5 class="white-text">Connect</h5>
+				  <ul>
+					<li><a class="white-text" href="#!">Link 1</a></li>
+					<li><a class="white-text" href="#!">Link 2</a></li>
+					<li><a class="white-text" href="#!">Link 3</a></li>
+					<li><a class="white-text" href="#!">Link 4</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+		  <div class="container">
+		  Made by <a class="brown-text text-lighten-3" href="#">Lexus</a>
+		  </div>
+		</div>
+	</footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+	 <!-- Bootstrap Core JavaScript >
+    <script src="js/bootstrap.min.js"></script-->
+	<script>
+		$(document).ready(function() {
+			$('select').material_select();
+			$('.slider').slider({images:true});
+			$('.slider').slider("start");
+			$('.tooltipped').tooltip({delay: 50});
+			$('.modal-trigger').leanModal({ready: beforeBeerModal});
+			$(".button-collapse").sideNav();
+		});
+		/*$('.carousel').carousel({
+			interval: 3000 //changes the speed
+		})*/
+		function beforeBeerModal(){
+			var x = $("#beer-modal .modal-beer").height();
+			console.log(x);
+			$("#beer-modal .modal-brewer").height(x);
+		}
+	</script>
+
+  </body>
+</html>

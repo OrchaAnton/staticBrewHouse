@@ -1,0 +1,215 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+body {
+   /* padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+		background: url(../img/whitebrick.jpg) repeat !important;
+}
+
+
+nav ul a,
+nav .brand-logo {
+  color: #fff;
+}
+
+nav ul li:hover > a, nav ul li.active > a{
+	color: #fcaf3b;
+}
+
+nav .right-nav {
+    float: right;
+    margin-left: 50px;
+}
+input{
+	font-size: 1.5rem !important; 
+}
+.fa {
+	vertical-align: middle;
+}
+
+.avatar-md {
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+}
+@media only screen and (min-width : 601px) {
+	.avatar-md, .avatar-sm {
+		width: 150px;
+		height: 150px;
+		margin: auto;
+		background-size: cover;
+		background-position: center;
+		border-radius: 50%;
+	}
+}
+
+#beer-modal {
+	width:85%;
+	max-height: 80%;
+}
+.tab-cont{
+	-webkit-transition: color .28s ease;
+    -moz-transition: color .28s ease;
+    -o-transition: color .28s ease;
+    -ms-transition: color .28s ease;
+    transition: color .28s ease;
+}
+
+@media only screen and (min-width: 993px){
+.container {
+    width: 85%;
+}
+}
+.parallax111{
+	background: url(../img/bg-beer.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.card-content p.tap-icon{
+	margin: 5px 0 -20px;
+}
+.tap-icon img{
+	width: 15%;
+	margin: 10px
+}
+.listmakers .card.medium .card-image{
+	max-height: 55%;
+}
+
+.listmakers .card.medium .card-content{
+	max-height: 45%;
+	overflow: visible;
+}
+
+#sign-modal{
+	/*width: 42%;*/
+	max-height: 80%;
+	/*background-image: url(../img/back-wood.png);*/
+}
+#sign-modal .modal-content{
+	/*height: 500px;*/
+}
+
+.enter{
+	width:100%;
+}
+
+.blog-header{
+	width:100%; 
+	height:300px; 
+	/*background: url(http://www.factroom.ru/facts/wp-content/uploads/2012/04/pivo.jpg) no-repeat;*/
+	background-position-y: -50px;
+	background-size: cover;
+}
+
+.h3, .card-title.h3 {
+	font-size: 2.92rem;
+	line-height: 110%;
+	margin: 1.46rem 0 1.168rem 0;
+	font-weight: 800;	
+}
+
+.bold {
+    font-weight: 800;
+}
+.italic {
+	font-style: italic;
+}
+
+input.info:disabled {
+	color: #90a4ae;
+}
+.no-mg-bottom {
+  margin-bottom: 0 !important; }
+
+@media only screen and (max-width : 601px) {
+.secondary-content.small  i {
+	font-size: 14px;
+}
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../font/glyphs/icomoon.eot?u1nd05');
+	src:url('../font/glyphs/icomoon.eot?u1nd05#iefix') format('embedded-opentype'),
+		url('../font/glyphs/icomoon.ttf?u1nd05') format('truetype'),
+		url('../font/glyphs/icomoon.woff?u1nd05') format('woff'),
+		url('../font/glyphs/icomoon.svg?u1nd05#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-beer:before {
+	content: "\e900";
+}
+.icon-users:before {
+	content: "\e901";
+}

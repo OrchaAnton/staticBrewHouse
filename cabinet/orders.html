@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>BrewHouse</title>
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="stylesheet" href="../font-awesome-4.5.0/css/font-awesome.min.css">
+	<link href="../css/component.css" rel="stylesheet">
+	<link href="../css/blog.css" rel="stylesheet">
+	<style>
+		.banner{
+			/*opacity:0.8;*/
+			width: 100%;
+			background: no-repeat;
+			height: 40vh;
+			background-image: url(../img/14.jpg);
+			background-size: cover;
+			background-position: 50%;
+		}
+		ul.side-nav.leftside-navigation {
+			top: 64px;
+			/*width: 300px;*/
+		}
+		.leftmenu-item:hover, .leftmenu-item.active {
+			background-color: #cfd8dc;
+		}
+		/*
+		.main{
+			background: url(../img/whitebrick.jpg) repeat !important;
+		}
+		body{
+			background: none !important;
+		}
+		*/
+		.info-header{
+			background: url(../img/14.jpg) no-repeat;
+			background-size: cover;
+			background-position: 50% 70%;
+			height: 30vh;
+			
+		}
+		.collection .title{
+			font-weight: 500;
+		}
+		ul.messages li:hover {
+			cursor: pointer;
+			background-color: #e0e0e0
+		}
+		textarea.materialize-textarea{
+			min-height: 1rem !important; 
+			height: 2rem !important; 
+			max-height: 3rem !important;
+			overflow: auto !important;
+		}
+		
+		.main, footer {
+		  padding-left: 240px;
+		}
+
+		@media only screen and (max-width : 992px) {
+		  header, .main, footer {
+			padding-left: 0;
+		  }
+		}
+        .act{
+            width: 50px;
+        }
+	</style>
+</head>
+
+<body>
+	<!-- окно авторизации -->
+	<div id="sign-modal" class="modal" style="">
+		<div class="modal-content center-align">
+			<h4>Добро пожаловать!</h4>
+			<img class="circle responsive-img hide-on-small-only"src="../img/logoBig.png" style="width:150px"/>
+			<div class="row">
+				<form class="col s12">
+				  <div class="row no">
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">email</i>
+					  <input id="icon_prefix" type="email" class="validate">
+					  <label for="icon_prefix">Email</label>
+					</div>
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">vpn_key</i>
+					  <input id="icon_telephone" type="password" class="validate">
+					  <label for="icon_telephone">Пароль</label>
+					</div>
+				  </div>
+				</form>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<a class="waves-effect waves-light btn-large light-green accent-4 enter hide-on-small-only"><i class="fa fa-sign-in "></i>&nbsp;&nbsp;&nbsp;Вход</a>
+					<a class="waves-effect waves-light btn light-green accent-4 enter hide-on-large-only">Вход</a>
+				</div>
+				<div class="col s12">&nbsp;</div>
+				<div class="col s12">
+					<a class="waves-effect waves-light btn-large amber accent-3 enter hide-on-small-only"><i class="fa fa-power-off"></i>&nbsp;&nbsp;&nbsp;Регистрация</a>
+					<a class="waves-effect waves-light btn amber accent-3 enter hide-on-large-only">Регистрация</a>
+				</div>
+			</div>
+		</div>
+		<!--div class="modal-footer">
+		
+			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		</div-->
+	</div>
+  
+	<!-- Навигация -->
+	<div class="navbar-fixed">
+		<!-- Dropdown Structure -->
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="#!"><i class="material-icons left">account_circle</i>Личный кабинет <span class="new badge">2</span></a></li>
+			<li><a href="#!"><i class="material-icons left">dashboard</i>Моя страница</a></li>
+			<li class="divider"></li>
+			<li><a href="#!"><i class="material-icons left">exit_to_app</i>Выход</a></li>
+		</ul>
+		<nav class="grey darken-3" role="navigation">
+			<div class="nav-wrapper container">
+				<a id="logo-container" href="#" class="brand-logo">
+					<img src="../img/logoN.png" alt="" style="height:55px; vertical-align:middle;">
+				</a>
+				<ul class="right-nav hide-on-med-and-down">
+					<li>
+						<a class="dropdown-button" href="#!" data-activates="dropdown1">
+							<i class="material-icons right">arrow_drop_down</i>
+							<img src="http://weknowyourdreams.com/images/batman/batman-07.jpg" class="circle responsive-img" style="height:45px; vertical-align:middle;" /> 
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DK Brevery 
+						</a>
+					</li>
+				</ul>	
+			
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="../landing/index.html"><i class="left fa fa-info fa-lg"></i>О Проекте</a>
+					</li>
+					<li>
+						<a href="../beer.html"><i class="left icon-beer"></i>Пиво</a>
+					</li>
+					<li class="">
+						<a href="../makers.html"><i class="left icon-users"></i>Пивовары</a>
+					</li>
+					<li>
+						<a href="../blogs.html"><i class="left fa fa-newspaper-o fa-lg"></i>Блоги</a>
+					</li>
+					<li>
+						<a href="../blogs.html"><i class="left fa fa-book fa-lg"></i>Азбука пива</a>
+					</li>
+					
+					<li></li>
+				</ul>
+				    
+				<ul class="right"></ul>
+				<ul id="nav-mobile" class="side-nav">
+					<li>
+						<a href="../about.html"><i class="left fa fa-info fa-lg"></i>О Проекте</a>
+					</li>
+					<li>
+						<a href="../beer.html"><i class="left icon-beer"></i>Пиво</a>
+					</li>
+					<li class="">
+						<a href="../makers.html"><i class="left icon-users"></i>Пивовары</a>
+					</li>
+					<li>
+						<a href="../blogs.html"><i class="left fa fa-newspaper-o fa-lg"></i>Блоги</a>
+					</li>
+					<li>
+						<a href="../blogs.html"><i class="left fa fa-book fa-lg"></i>Азбука пива</a>
+					</li>
+				</ul>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="slide-out1" class="button-collapse right"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+	</div>
+	
+	<!-- Боковая панель меню -->
+	<ul id="slide-out" class="side-nav fixed leftside-navigation blue-grey lighten-4 white-text">
+		<li>
+			<div class="section row">
+				<div class="col s12">
+					<div class="avatar-md" style="background-image: url(http://weknowyourdreams.com/images/batman/batman-07.jpg)"> </div>
+					
+				</div>
+				<div class="col s12 center-align">
+					<br>
+					<button class="waves-effect waves-light btn">Сменить</button>
+				</div>
+			</div>
+		</li>
+		<li ><a href="info.html"><i class="fa fa-user fa-2x fa-fw"></i>Информация</a></li>
+		<li ><a href="messages.html"><i class="fa fa-envelope-o fa-2x fa-fw"></i> Сообщения <span class="new badge">2</span></a></li>
+		<li ><a href="stat.html"><i class="fa fa-bar-chart fa-2x fa-fw"></i> Статистика</a></li>
+		<li class="active"><a href="orders.html"><i class="fa fa-shopping-cart fa-2x fa-fw"></i> Заказы</a></li>
+		<li><a href="settings.html"><i class="fa fa-cogs fa-2x fa-fw"></i> Настройки</a></li>
+	</ul> 
+	
+	<div class="row main">
+		<div class="col s12 hide-on-small-only" >
+			<div class="info-header"></div>
+		</div>
+		<div class="col s12">
+			<div class="section">
+				<div class="row">
+				<!-- Список сообщений -->
+					<div class="col s12">
+						<ul class="collection">
+							<li class="collection-item">
+								<div class="row no-mg-bottom">
+                                    <div class="col s2">
+                                        <i class="material-icons circle">folder</i>
+                                    </div>
+                                    <div class="col s10 m5">
+                                        <span class="title">Заказ № 000002-356</span>
+                                        <p><a href="#">Бельгийский стаут</a><br>
+                                            Second Line
+                                        </p>
+                                    </div>
+                                    <div class="col s12 m5 RIGHT-ALIGN">
+                                        <img src="../img/cal.png" alt="" class="circle act tooltipped" data-position="bottom" data-delay="50" data-tooltip="Предполагемый срок 21.05.2016"  />
+                                        <img src="../img/feed_custA.png" alt="" class="circle act tooltipped" data-position="bottom" data-delay="50" data-tooltip="Отзыв покупателя" />
+                                       	<img src="../img/feed_manA.png" alt="" class="circle act tooltipped" data-position="bottom" data-delay="50" data-tooltip="Отзыв продавца" />
+                                        <img src="../img/deleverA.png" alt="" class="circle act tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip"/>
+                                    </div>
+                                </div>
+
+							</li>
+							<li class="collection-item avatar">
+
+								<span class="title">Title</span>
+								<p>First Line <br>
+									Second Line
+								</p>
+								<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+							</li>
+							<li class="collection-item avatar">
+								<i class="material-icons circle green">insert_chart</i>
+								<span class="title">Title</span>
+								<p>First Line <br>
+									Second Line
+								</p>
+								<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+							</li>
+							<li class="collection-item avatar">
+								<i class="material-icons circle red">play_arrow</i>
+								<span class="title">Title</span>
+								<p>First Line <br>
+									Second Line
+								</p>
+								<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Footer -->
+    	<footer class="page-footer  amber accent-4">
+		<div class="container">
+			<div class="row">
+				
+			</div>
+		</div>
+		<div class="footer-copyright">
+		  <div class="container">
+		  Made by <a class="brown-text text-lighten-3" href="#">Lexus</a>
+		  </div>
+		</div>
+	</footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('select').material_select();
+			$('.slider').slider({images:true});
+			$('.slider').slider("start");
+			$('.tooltipped').tooltip({delay: 50});
+			$('.modal-trigger').leanModal();
+			$(".button-collapse").sideNav();
+			$('ul.tabs').tabs();
+			$('.button-collapse1').sideNav({
+				  menuWidth: 300, // Default is 240
+				  edge: 'right', // Choose the horizontal origin
+				  closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+				}
+			);
+			$('.datepicker').pickadate({
+				selectMonths: true, // Creates a dropdown to control month
+				selectYears: 65, // Creates a dropdown of 15 years to control year
+				max: '2016-02-02'
+				//now: '1989-01-24'
+			});
+		});
+		function showMessage(){
+			$(".list-message, .single-message").toggleClass("hide");
+		}
+	</script>
+
+  </body>
+
+</html>
