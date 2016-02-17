@@ -6,23 +6,50 @@
 -->
 <html>
 	<head>
-		<title>Landed by HTML5 UP</title>
+		<title>BrewHouse</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<style>
+			.hoverable:hover {
+				transition: box-shadow .25s;
+				box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .hoverable{
+                padding: 1em;
+                cursor: pointer;
+            }
+            .material-tooltip {
+                padding: 10px 8px;
+                font-size: 1rem;
+                z-index: 2000;
+                background-color: #e44c65;
+                border-radius: 2px;
+                color: #fff;
+                min-height: 36px;
+                line-height: 120%;
+                opacity: 0;
+                display: none;
+                position: absolute;
+                text-align: center;
+                max-width: calc(100% - 4px);
+                overflow: hidden;
+                left: 0;
+                top: 0;
+                will-change: top, left; }
+		</style>
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
-
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<!--<h1 id="logo"><a href="index.html">Landed</a></h1>-->
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<!--<li><a href="index.html">Home</a></li>
 							<li>
 								<a href="#">Layouts</a>
 								<ul>
@@ -40,7 +67,7 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="elements.html">Elements</a></li>-->
 							<li><a href="#" class="button special">Sign Up</a></li>
 						</ul>
 					</nav>
@@ -101,7 +128,7 @@
 						</header>
 						<p>На нашем портале представленно огромное количество разнообразных сортов от частных мини и микро пивоварен.</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Посмотреть</a></li>
+							<li><a href="../beer.html" class="button">Посмотреть</a></li>
 						</ul>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
@@ -117,7 +144,7 @@
 						</header>
 						<p>На портале Вы можете продать свое пиво любителям крафтового пива. Вы сможете вести блог, делиться рецептами, узнавать что-то новое для себя.</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Узнать больше</a></li>
+							<li><a href="../makers.html" class="button">Узнать больше</a></li>
 						</ul>
 					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
@@ -132,53 +159,66 @@
 						</header>
 						<div class="box alt">
 							<div class="row uniform">
-								<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-beer"></span>
-									<h3>Крафтовое пиво</h3>
-									<p>Попробуйте пиво домашних пивоваров со всего мира</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Попробовать</a></li>
-									</ul>
+								<section class="4u 6u(medium) 12u$(xsmall) ">
+                                    <div class="hoverable tooltipped" data-position="bottom" data-delay="20" data-tooltip="Попробовать сейчас!">
+                                        <span class="icon alt major fa-beer"></span>
+                                        <h3>Крафтовое пиво</h3>
+                                        <p>Попробуйте пиво домашних пивоваров со всего мира</p>
+                                        <!--<ul class="actions">
+                                            <li><a href="#" class="button">Попробовать</a></li>
+                                        </ul>-->
+                                    </div>
 								</section>
-								<section class="4u 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-book"></span>
-									<h3>Азбука пива</h3>
-									<p>Узнайте какое пиво существует и дополняйте нашу энциклопедию</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Узнать</a></li>
-									</ul>
+								<section class="4u 6u$(medium) 12u$(xsmall) ">
+                                    <div class="hoverable tooltipped" data-position="bottom" data-delay="20" data-tooltip="Узнать сегодня!">
+									    <span class="icon alt major fa-book"></span>
+									    <h3>Азбука пива</h3>
+                                        <p>Узнайте какое пиво существует и дополняйте нашу энциклопедию</p>
+                                        <!--<ul class="actions">
+                                            <li><a href="#" class="button">Узнать</a></li>
+                                        </ul>-->
+                                    </div>
+
 								</section>
-								<section class="4u$ 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-users"></span>
-									<h3>Пивовары</h3>
-									<p>Предлагайте свое пиво, к вашим услугам большое количество потенциальных покупателей</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Предложить</a></li>
-									</ul>
+								<section class="4u$ 6u(medium) 12u$(xsmall) ">
+                                    <div class="hoverable tooltipped" data-position="bottom" data-delay="20" data-tooltip="Предложить сейчас!">
+                                        <span class="icon alt major fa-users"></span>
+                                        <h3>Пивовары</h3>
+                                        <p>Предлагайте свое пиво, к вашим услугам большое количество потенциальных покупателей</p>
+                                        <!--<ul class="actions">
+                                            <li><a href="#" class="button">Предложить</a></li>
+                                        </ul>-->
+                                    </div>
 								</section>
-								<section class="4u 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-star"></span>
-									<h3>Рейтинги</h3>
-									<p>Узнайте какое пиво самое приятное на вкус и какой пивовар варит лучше всех</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Посмотреть</a></li>
-									</ul>
+								<section class="4u 6u$(medium) 12u$(xsmall) ">
+                                    <div class="hoverable tooltipped" data-position="top" data-delay="20" data-tooltip="Посмотреть срочно!">
+                                        <span class="icon alt major fa-star"></span>
+                                        <h3>Рейтинги</h3>
+                                        <p>Узнайте какое пиво самое приятное на вкус и какой пивовар варит лучше всех</p>
+                                        <!--<ul class="actions">
+                                            <li><a href="#" class="button">Посмотреть</a></li>
+                                        </ul>-->
+                                    </div>
 								</section>
-								<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-newspaper-o"></span>
-									<h3>Блоги</h3>
-									<p>Читайте и пишите рецепты, статьи, рецензии. Делитесь впечатлениями с людьми</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Прочитать</a></li>
-									</ul>
+								<section class="4u 6u(medium) 12u$(xsmall) tooltipped" data-position="top" data-delay="20" data-tooltip="Прочитать не откладывая!">
+                                    <div class="hoverable ">
+                                        <span class="icon alt major fa-newspaper-o"></span>
+                                        <h3>Блоги</h3>
+                                        <p>Читайте и пишите рецепты, статьи, рецензии. Делитесь впечатлениями с людьми</p>
+                                        <!--<ul class="actions">
+                                            <li><a href="#" class="button">Прочитать</a></li>
+                                        </ul>-->
+                                    </div>
 								</section>
-								<section class="4u$ 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-video-camera"></span>
-									<h3>Мастер-классы</h3>
-									<p>Снимайте видео выкладывайте на портале, новичкам будет легче освоиться</p>
-									<ul class="actions">
-										<li><a href="#" class="button">Поучавствовать</a></li>
-									</ul>
+								<section class="4u$ 6u$(medium) 12u$(xsmall) ">
+                                    <div class="hoverable tooltipped" data-position="bottom" data-delay="20" data-tooltip="Поделиться со всеми!">
+                                        <span class="icon alt major fa-video-camera"></span>
+                                        <h3>Мастер-классы</h3>
+                                        <p>Снимайте видео выкладывайте на портале, новичкам будет легче освоиться</p>
+                                        <!--<ul class="actions">-->
+                                            <!--<li><a href="#" class="button">Поучавствовать</a></li>-->
+                                        <!--</ul>-->
+                                    </div>
 								</section>
 							</div>
 						</div>
@@ -230,8 +270,14 @@
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+            <script src="../js/materialize.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.tooltipped').tooltip({delay: 50});
+        });
+    </script>
 
 	</body>
 </html>
